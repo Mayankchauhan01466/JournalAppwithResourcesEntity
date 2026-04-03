@@ -26,7 +26,7 @@ public class JournalEntryController {
     }
 
     // All id crete ho jayngi
-    @PostMapping(consumes = "application/json")
+    @PostMapping(consumes = "application/json");
     public JournalEntry createEntry(@RequestBody JournalEntry myEntry) {
         myEntry.setDate(LocalDateTime.now());
         journalEntryService.saveEntry(myEntry);
